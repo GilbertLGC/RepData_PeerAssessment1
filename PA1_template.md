@@ -65,7 +65,7 @@ The mean of the total number of steps taken each day is **9354.2295**, while the
 
 ## 3. What is the average daily activity pattern?
 
-1) Calculate the average number os steps taken each interval.
+1) Calculate the average number of steps taken each interval.
 
 ```r
 average_steps_each_interval <- tapply(data$steps, data$interval, mean, na.rm = T)
@@ -115,7 +115,7 @@ for (i in 1:length(new_data$steps))
 new_steps_each_day <- tapply(new_data$steps, new_data$date, sum)
 ```
 
-4) Compare the time series histogram between two datasets.
+4) Compare the time series histogram of the total number of steps taken each day between two datasets.
 
 ```r
 par(mfrow = c(1, 2))
@@ -125,7 +125,7 @@ barplot(new_steps_each_day, xlab = "Date", ylab = "Steps", main = "After  Fillin
 
 ![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15.png) 
 
-5) Compare the frequency histogram between two datasets.
+5) Compare the frequency histogram of the total number of steps taken each day between two datasets.
 
 ```r
 par(mfrow = c(1, 2))
